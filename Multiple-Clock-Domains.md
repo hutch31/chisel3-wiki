@@ -1,4 +1,4 @@
-Chisel 3 supports multiple clock domains as follows.
+Chisel 3 creates an implicit clock and reset on any Reg instance when it is declared.  By default each Reg will be connected to "clock" and "reset", but these can be overridden using the `withClock`, `withReset`, and `withClockAndReset` statments.  Examples of using `withClock` and `withClockAndReset` are shown below.
 
 Note that in order to cross clock domains safely, you will need appropriate synchronization logic (such as an asynchronous FIFO).
 
